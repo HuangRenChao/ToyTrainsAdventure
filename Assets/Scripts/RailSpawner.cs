@@ -25,6 +25,7 @@ public class RailSpawner : MonoBehaviour {
 		Vector3 railPostion = playerPosition + Vector3.down;
 
 		railObject.transform.position = railPostion + lookDirection * railOffset;
+		railObject.transform.parent = transform;
 
 	}
 
