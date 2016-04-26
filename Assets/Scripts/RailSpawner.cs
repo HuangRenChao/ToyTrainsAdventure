@@ -16,7 +16,7 @@ public class RailSpawner : MonoBehaviour {
 		Debug.Log (transform.position);
 	}
 
-	void InstantiateRail(int railIndex, float railOffset){
+	public void InstantiateRail(int railIndex, float railOffset){
 		GameObject railObject = Instantiate (railPrefab [railIndex]);
 		Player player = GameObject.FindObjectOfType<Player> ();
 
@@ -26,11 +26,12 @@ public class RailSpawner : MonoBehaviour {
 
 		railObject.transform.position = railPostion + lookDirection * railOffset;
 		railObject.transform.parent = transform;
+		Debug.Log ("Instantiate rail, Look direction: " + lookDirection);
 
 	}
 
 	void PullTrigger () {
-		Debug.Log ("Trigger Pulled, Look direction: ");
+		
 
 		InstantiateRail (0, railOffset);
 	}
