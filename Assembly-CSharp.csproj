@@ -89,6 +89,7 @@
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RailSpawner.cs" />
      <Compile Include="Assets\Scripts\RailTween.cs" />
+     <Compile Include="Assets\Scripts\RotationTest.cs" />
      <None Include="Assets\Cardboard\Distortion\CardboardDistortion.cginc" />
      <None Include="Assets\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
      <None Include="Assets\Cardboard\Resources\UnlitTexture.shader" />

@@ -34,8 +34,7 @@ public class Player : MonoBehaviour {
 
 	void MoveToDirection(Vector3 lookDirection, float movingDistance){
 		GameObject player = GameObject.Find ("Player");
-
-		LeanTween.move( player, player.transform.position + lookDirection * movingDistance, 2f);
+		LeanTween.move( player, player.transform.position + lookDirection * movingDistance, 2f).setEase(LeanTweenType.linear);
 
 
 	}
@@ -47,6 +46,10 @@ public class Player : MonoBehaviour {
 
 	public Vector3 LookDirection() {
 		return Vector3.ProjectOnPlane (head.Gaze.direction, Vector3.up);
+	}
+
+	public Vector3 PlayerRotation() {
+		return head.transform.rotation.eulerAngles;
 	}
 
 

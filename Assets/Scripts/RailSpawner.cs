@@ -22,9 +22,11 @@ public class RailSpawner : MonoBehaviour {
 
 		Vector3 lookDirection = player.LookDirection ();
 		Vector3 playerPosition = player.transform.position;
+		Vector3 playerRotation = player.PlayerRotation ();
 		Vector3 railPostion = playerPosition + Vector3.down;
 
 		railObject.transform.position = railPostion + lookDirection * railOffset;
+		railObject.transform.rotation = Quaternion.Euler (playerRotation);
 		railObject.transform.parent = transform;
 		Debug.Log ("Instantiate rail, Look direction: " + lookDirection);
 
