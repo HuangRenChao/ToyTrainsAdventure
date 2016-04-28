@@ -51,9 +51,9 @@
      <Compile Include="Assets\Plugins\LeanTest.cs" />
      <Compile Include="Assets\Plugins\LeanTween.cs" />
      <None Include="Assets\Cardboard\Distortion\CardboardDistortion.cginc" />
-     <None Include="Assets\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
+     <None Include="Assets\Asset store\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
      <None Include="Assets\Cardboard\Resources\UnlitTexture.shader" />
-     <None Include="Assets\LeanTween\ReadMe.txt" />
+     <None Include="Assets\Asset store\LeanTween\ReadMe.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Cardboard\Resources\UI\CardboardReticleShader.shader" />
      <None Include="Assets\Cardboard\Resources\SolidColor.shader" />

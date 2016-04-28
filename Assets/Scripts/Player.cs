@@ -46,6 +46,7 @@ public class Player : MonoBehaviour {
 
 	public Vector3 LookDirection() {
 		return Vector3.ProjectOnPlane (head.Gaze.direction, Vector3.up);
+//		return head.Gaze.direction;
 	}
 
 	public Vector3 PlayerRotation() {

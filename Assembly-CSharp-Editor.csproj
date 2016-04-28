@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Asset store\LeanTween\Editor\LeanTweenDocumentationEditor.cs" />
      <Compile Include="Assets\Cardboard\Editor\CardboardAudioListenerEditor.cs" />
      <Compile Include="Assets\Cardboard\Editor\CardboardAudioRoomEditor.cs" />
      <Compile Include="Assets\Cardboard\Editor\CardboardAudioSourceEditor.cs" />
@@ -53,11 +54,10 @@
      <Compile Include="Assets\Cardboard\Editor\CardboardMenu.cs" />
      <Compile Include="Assets\Cardboard\Editor\CardboardSetup.cs" />
      <Compile Include="Assets\Cardboard\Editor\StereoControllerEditor.cs" />
-     <Compile Include="Assets\LeanTween\Editor\LeanTweenDocumentationEditor.cs" />
      <None Include="Assets\Cardboard\Distortion\CardboardDistortion.cginc" />
-     <None Include="Assets\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
+     <None Include="Assets\Asset store\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
      <None Include="Assets\Cardboard\Resources\UnlitTexture.shader" />
-     <None Include="Assets\LeanTween\ReadMe.txt" />
+     <None Include="Assets\Asset store\LeanTween\ReadMe.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Cardboard\Resources\UI\CardboardReticleShader.shader" />
      <None Include="Assets\Cardboard\Resources\SolidColor.shader" />
