@@ -34,7 +34,6 @@ public class Player : MonoBehaviour {
 
 	void MoveToDirection(Vector3 lookDirection, float movingDistance){
 		GameObject player = GameObject.Find ("Player");
-		LeanTween.move( player, player.transform.position + lookDirection * movingDistance, 2f).setEase(LeanTweenType.linear);
 
 
 	}
