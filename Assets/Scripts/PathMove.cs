@@ -22,8 +22,8 @@ public class PathMove : MonoBehaviour {
 
 	void Start () {
 
-		// Tween automatically
-		LeanTween.moveSpline(movingObject, cr.pts, RotationDurationInSeconds).setOrientToPath(true).setRepeat(-1).setDirection(1f);
+		MoveTrain ();
+
 	}
 	
 
@@ -40,5 +40,8 @@ public class PathMove : MonoBehaviour {
 			cr.gizmoDraw(); // To Visualize the path, use this method
 	}
 
+	public void MoveTrain(){
+		LeanTween.moveSpline(movingObject, cr.pts, RotationDurationInSeconds).setOrientToPath(true).setRepeat(-1).setDirection(1f);
+	}
 
 }

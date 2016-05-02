@@ -96,12 +96,17 @@
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\CardboardiOSDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\UnityEditorDevice.cs" />
      <Compile Include="Assets\Scripts\CubeMove.cs" />
+     <Compile Include="Assets\Scripts\FenceSpawner.cs" />
      <Compile Include="Assets\Scripts\MoveUp.cs" />
+     <Compile Include="Assets\Scripts\MovingObstacle.cs" />
      <Compile Include="Assets\Scripts\PathMove.cs" />
+     <Compile Include="Assets\Scripts\Patrol.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RailSpawner.cs" />
      <Compile Include="Assets\Scripts\RailTween.cs" />
      <Compile Include="Assets\Scripts\RotationTest.cs" />
+     <Compile Include="Assets\Scripts\TargetGround.cs" />
+     <Compile Include="Assets\Scripts\ToysWantRide.cs" />
      <Compile Include="Assets\Scripts\Train.cs" />
      <Compile Include="Assets\Scripts\TrainCollisionDetect.cs" />
      <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />

@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Train
+  - ToysWantRide
+  - TargetArea
+  - TrainWithToy
+  - ToysInTarget
+  - ToysOnTrain
+  - Obstacle
   layers:
   - Default
   - TransparentFX
