@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20895622212c94afc9d91683eec6ee1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userFence: {fileID: 125218, guid: f0d645ba5a68649e18cea04ff8c78ba3, type: 2}
+  userFencePrefab: {fileID: 125218, guid: f0d645ba5a68649e18cea04ff8c78ba3, type: 2}
 --- !u!4 &243891972
 Transform:
   m_ObjectHideFlags: 0
@@ -2701,6 +2701,22 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!1 &840320032 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: b8b03d395f5734e98af91ccf44f9bf47, type: 2}
+  m_PrefabInternal: {fileID: 1090284664}
+--- !u!114 &840320035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 840320032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c78f6652a874e3497ad70fb80a0b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingDistancePerUpdate: 0
 --- !u!1 &846088903
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,6 +3673,18 @@ MonoBehaviour:
   m_EventMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1067715983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1067715974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd91b1d8bfd6b40b89b216ece4e61fb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugRay: 1
 --- !u!1001 &1090284664
 Prefab:
   m_ObjectHideFlags: 0

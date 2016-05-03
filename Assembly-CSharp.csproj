@@ -101,9 +101,11 @@
      <Compile Include="Assets\Scripts\MovingObstacle.cs" />
      <Compile Include="Assets\Scripts\PathMove.cs" />
      <Compile Include="Assets\Scripts\Patrol.cs" />
+     <Compile Include="Assets\Scripts\PhysicsRayCaster.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RailSpawner.cs" />
      <Compile Include="Assets\Scripts\RailTween.cs" />
+     <Compile Include="Assets\Scripts\RayDrawTest.cs" />
      <Compile Include="Assets\Scripts\RotationTest.cs" />
      <Compile Include="Assets\Scripts\TargetGround.cs" />
      <Compile Include="Assets\Scripts\ToysWantRide.cs" />

@@ -2,9 +2,11 @@
 using System.Collections;
 
 public class FenceSpawner : MonoBehaviour {
-	public GameObject userFence;
+
+	public GameObject userFencePrefab;
 
 	private Player player;
+	private PhysicsRayCaster physicsRayCaster;
 
 	// Use this for initialization
 	void Start () {
@@ -17,14 +19,16 @@ public class FenceSpawner : MonoBehaviour {
 	}
 
 	void InstantiateFence(){
+		GameObject userFenceObject = Instantiate (userFencePrefab);
 		player = GameObject.FindObjectOfType<Player> ();
+		physicsRayCaster = GameObject.FindObjectOfType<PhysicsRayCaster> ();
 
-		Vector3 lookDirection = player.LookDirection ();
-		Vector3 playerRotation = player.PlayerRotation ();
+		Vector3 placePosition = Vector3.ProjectOnPlane(physicsRayCaster.RayHitPoint(), Vector3.up);
+//		Vector3 playerRotation = player.PlayerRotation ();
 
-		GameObject userFenceObject = Instantiate (userFence);
-		userFenceObject.transform.position = lookDirection * 10;
-		userFenceObject.transform.rotation = Quaternion.Euler (playerRotation);
+
+		userFenceObject.transform.position = placePosition;
+//		userFenceObject.transform.rotation = Quaternion.Euler (playerRotation);
 		userFenceObject.transform.parent = transform;
 
 

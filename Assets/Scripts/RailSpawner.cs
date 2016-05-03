@@ -8,7 +8,7 @@ public class RailSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Cardboard.SDK.OnTrigger += PullTrigger; // Trigger pull PullTrigger()
+//		Cardboard.SDK.OnTrigger += PullTrigger; // Trigger pull PullTrigger()
 
 	}
 
