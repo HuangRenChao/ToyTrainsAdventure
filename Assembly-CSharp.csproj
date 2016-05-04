@@ -96,9 +96,13 @@
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\CardboardiOSDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\UnityEditorDevice.cs" />
      <Compile Include="Assets\Scripts\CubeMove.cs" />
-     <Compile Include="Assets\Scripts\FenceSpawner.cs" />
+     <Compile Include="Assets\Scripts\FPSDisplay.cs" />
      <Compile Include="Assets\Scripts\MoveUp.cs" />
+     <Compile Include="Assets\Scripts\MovedToysCounterDisplay.cs" />
      <Compile Include="Assets\Scripts\MovingObstacle.cs" />
+     <Compile Include="Assets\Scripts\MovingObstacleSpawner.cs" />
+     <Compile Include="Assets\Scripts\Mushroom.cs" />
+     <Compile Include="Assets\Scripts\MushroomSpawner.cs" />
      <Compile Include="Assets\Scripts\PathMove.cs" />
      <Compile Include="Assets\Scripts\Patrol.cs" />
      <Compile Include="Assets\Scripts\PhysicsRayCaster.cs" />

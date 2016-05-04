@@ -41,6 +41,7 @@ public class PathMove : MonoBehaviour {
 	}
 
 	public void MoveTrain(){
+		movingObject.SetActive (true);
 		LeanTween.moveSpline(movingObject, cr.pts, RotationDurationInSeconds).setOrientToPath(true).setRepeat(-1).setDirection(1f);
 	}
 

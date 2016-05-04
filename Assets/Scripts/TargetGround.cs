@@ -3,6 +3,8 @@ using System.Collections;
 
 public class TargetGround : MonoBehaviour {
 
+	public int toysMovedCount = 0;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -30,6 +32,8 @@ public class TargetGround : MonoBehaviour {
 		toysOnTrain.transform.parent = targetGround.transform;
 		toysOnTrain.transform.tag = "ToysInTarget";
 		toysOnTrain.GetComponent<SphereCollider> ().enabled = false;
-	}
+		toysMovedCount++;
+}
+
 
 }

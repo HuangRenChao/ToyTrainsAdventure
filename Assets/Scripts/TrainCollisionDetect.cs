@@ -15,7 +15,7 @@ public class TrainCollisionDetect : MonoBehaviour {
 
 	void OnCollisionEnter (Collision collision){
 		Debug.Log ("Collision!");
-		GameObject train = GameObject.Find ("Train");
-		LeanTween.cancel (train);
+		GameObject trainGroup = GameObject.Find ("TrainGroup");
+		LeanTween.cancel (trainGroup);
 	}
 }

@@ -11,6 +11,7 @@ TagManager:
   - ToysInTarget
   - ToysOnTrain
   - Obstacle
+  - Mushroom
   layers:
   - Default
   - TransparentFX

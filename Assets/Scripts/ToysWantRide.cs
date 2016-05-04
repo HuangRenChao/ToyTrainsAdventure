@@ -32,7 +32,7 @@ public class ToysWantRide : MonoBehaviour {
 
 		train.gameObject.tag = "TrainWithToy";
 		toysWantRide.gameObject.tag = "ToysOnTrain";
-		toysWantRide.transform.position = trainGroup.transform.position;
+		toysWantRide.transform.position = trainGroup.transform.position + Vector3.up;
 		toysWantRide.transform.parent = trainGroup.transform;
 	}
 
