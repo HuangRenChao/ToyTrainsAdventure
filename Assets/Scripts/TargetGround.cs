@@ -4,6 +4,8 @@ using System.Collections;
 public class TargetGround : MonoBehaviour {
 
 	public int toysMovedCount = 0;
+	public Transform[] placePositions;
+	public int occupiedPlaceCount = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -26,9 +28,18 @@ public class TargetGround : MonoBehaviour {
 	void DropOffTarget(GameObject toysOnTrain){
 		GameObject targetGround = GameObject.Find ("TargetGround");
 		GameObject train = GameObject.Find ("Train");
+		int placePositionLength = placePositions.Length;
 
 		train.gameObject.tag = "Train";
-		toysOnTrain.transform.position = targetGround.transform.position;
+
+		if(occupiedPlaceCount <= placePositionLength) {
+			toysOnTrain.transform.position = placePositions [occupiedPlaceCount].position;
+			occupiedPlaceCount++;
+		} else {
+			occupiedPlaceCount = 0;
+		}
+
+
 		toysOnTrain.transform.parent = targetGround.transform;
 		toysOnTrain.transform.tag = "ToysInTarget";
 		toysOnTrain.GetComponent<SphereCollider> ().enabled = false;
