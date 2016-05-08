@@ -7,9 +7,11 @@ public class TargetGround : MonoBehaviour {
 	public Transform[] placePositions;
 	public int occupiedPlaceCount = 0;
 
+	private AudioSource audioSource;
+
 	// Use this for initialization
 	void Start () {
-	
+		audioSource = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -34,6 +36,8 @@ public class TargetGround : MonoBehaviour {
 
 		if(occupiedPlaceCount <= placePositionLength) {
 			toysOnTrain.transform.position = placePositions [occupiedPlaceCount].position;
+			toysOnTrain.transform.rotation = toysOnTrain.transform.rotation * Quaternion.Euler (0, 180, 0);
+			audioSource.Play ();
 			occupiedPlaceCount++;
 		} else {
 			occupiedPlaceCount = 0;

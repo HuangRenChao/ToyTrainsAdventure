@@ -14,6 +14,6 @@ public class MovedToysCounterDisplay : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = "Moved toys: " + targetGround.toysMovedCount;
+		text.text = targetGround.toysMovedCount.ToString();
 	}
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class ToysWantRide : MonoBehaviour {
+
 	
 	// Use this for initialization
 	void Start () {
@@ -12,7 +13,7 @@ public class ToysWantRide : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 
 	void OnTriggerEnter (Collider col){
@@ -32,7 +33,8 @@ public class ToysWantRide : MonoBehaviour {
 
 		train.gameObject.tag = "TrainWithToy";
 		toysWantRide.gameObject.tag = "ToysOnTrain";
-		toysWantRide.transform.position = trainGroup.transform.position + Vector3.up;
+		toysWantRide.transform.position = trainGroup.transform.position + Vector3.up ;
+		toysWantRide.transform.rotation = train.transform.rotation * Quaternion.Euler(0,180,0);
 		toysWantRide.transform.parent = trainGroup.transform;
 	}
 

@@ -12,12 +12,15 @@ public class MushroomSpawner : MonoBehaviour {
 	private Mushroom mushroom;
 	private int mushroomCount;
 	private int mushroomArrayIndex = 0;
-
+	private SceneControl sceneControl;
 
 	// Use this for initialization
 	void Start () {
 		mushroomArray = new GameObject[maxMushroomCount];
+		sceneControl = GameObject.FindObjectOfType<SceneControl> ();
+
 		Cardboard.SDK.OnTrigger += PullTrigger;
+
 
 	}
 	
@@ -32,7 +35,7 @@ public class MushroomSpawner : MonoBehaviour {
 		player = GameObject.FindObjectOfType<Player> ();
 		physicsRayCaster = GameObject.FindObjectOfType<PhysicsRayCaster> ();
 
-		if(mushroomArrayIndex <= maxMushroomCount -1){
+		if(mushroomArrayIndex < maxMushroomCount -1){
 			InstantiateMushroom (mushroomArrayIndex);
 			mushroomArrayIndex++;
 
@@ -41,7 +44,7 @@ public class MushroomSpawner : MonoBehaviour {
 			for (int i = 1; i < maxMushroomCount; i++){
 				mushroomArray [i-1] = mushroomArray [i];
 			}
-			InstantiateMushroom (3);
+			InstantiateMushroom (maxMushroomCount -1);
 			mushroomArrayIndex++;
 
 		}
@@ -62,7 +65,9 @@ public class MushroomSpawner : MonoBehaviour {
 
 
 	void PullTrigger () {
-		InstantiateMushroomLimit ();
+		if(!sceneControl.isGameOver) {
+			InstantiateMushroomLimit ();
+		}
 
 	}
 

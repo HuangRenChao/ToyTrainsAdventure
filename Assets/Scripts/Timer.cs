@@ -4,22 +4,33 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
 
-	public float timeInSecs = 5.0f;
+	public float timePast = 0f;
+	public float totalGameTime = 30f;
 
+	private float remainingTimeInSecs = 5.0f;
 	private Text text;
+	private SceneControl sceneControl;
 
 	void Start() {
 		text = GetComponent<Text> ();
+		sceneControl = GameObject.FindObjectOfType<SceneControl> ();
+		remainingTimeInSecs = totalGameTime;
+
 	}
 
 
     void Update () {
-    	if(timeInSecs > 0) {
-			timeInSecs -= Time.deltaTime;
+    	if(!sceneControl.isGameOver) {
+			if (remainingTimeInSecs > 0) {
+				remainingTimeInSecs -= Time.deltaTime;
+				timePast += Time.deltaTime;
+				text.text = FloatToTime (remainingTimeInSecs, "00.00");
+			} else {
+				text.text = "Time's Up";
 
-			text.text = FloatToTime (timeInSecs, "00.00");
-		} else {
-			text.text = "Time's Up";
+			}
+		} else{
+			text.text = "Game Over";
 		}
 	}
 

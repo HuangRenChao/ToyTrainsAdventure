@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class TrainCollisionDetect : MonoBehaviour {
+
+	private GameObject playAgain;
+	private SceneControl sceneControl;
 
 	// Use this for initialization
 	void Start () {
+		sceneControl = GameObject.FindObjectOfType<SceneControl> ();
 	
 	}
 	
@@ -14,8 +18,15 @@ public class TrainCollisionDetect : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision collision){
-		Debug.Log ("Collision!");
 		GameObject trainGroup = GameObject.Find ("TrainGroup");
-		LeanTween.cancel (trainGroup);
+		if(collision.gameObject.tag == "Train" || collision.gameObject.tag == "TrainWithToy"){
+			
+			LeanTween.cancel (trainGroup);
+			sceneControl.isGameOver = true;
+
+
+
+		}
+
 	}
 }

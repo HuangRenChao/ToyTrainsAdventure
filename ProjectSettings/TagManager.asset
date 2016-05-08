@@ -12,6 +12,8 @@ TagManager:
   - ToysOnTrain
   - Obstacle
   - Mushroom
+  - IndicatorIdle
+  - IndicatorOff
   layers:
   - Default
   - TransparentFX
